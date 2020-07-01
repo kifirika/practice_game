@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.game .header{
+    height: 20vmin;
+    width: 80vmin;
+    font-size: 10vmin;
+    background-color: white;
+    box-sizing: border-box;
+}
+.game .field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80vmin;
+    width: 80vmin;
+    background-color: white;
+}
+.game .field .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18vmin;
+    width: 18vmin;
+    margin: 1vmin;
+    border: 2px solid gray;
+    box-sizing: border-box;
+    border-radius: 2vmin;
+    font-size: 10vmin;
+}
