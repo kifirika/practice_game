@@ -17,6 +17,7 @@ class Cell {
     set value(value){
         this._value = value;
         this.element.innerHTML = value == 0 ? '' : value;
+        this.element.setAttribute('nuclearPowerPlant', value);
     }
     clear(){
         this.value = '';
