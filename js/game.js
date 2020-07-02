@@ -148,7 +148,6 @@ class Game {
                             this.field[i][nextCellKey + 1].merge(currentCell);
                             hasMoved = true;
                         }
-
                         break;
                     }
                     nextCellKey--;
@@ -156,7 +155,6 @@ class Game {
                 }
             }
         }
-
         if (hasMoved) {
             this.spawnUnit();
         }
