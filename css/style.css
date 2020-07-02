@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+    .game .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 12vmin;
+        width: 80vmin;
+        font-size: 10vmin;
+        box-sizing: border-box;
+
+
+    }
+    .game .header .restart {
+        margin: 0 20px;
+    }
+    .game .field {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 80vmin;
+        width: 80vmin;
+        position: relative;
+        z-index: 1;
+    }
+        .game .field .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 18vmin;
+            width: 18vmin;
+            margin: 1vmin;
+            border: 2px solid gray;
+            box-sizing: border-box;
+            border-radius: 2vmin;
+            font-size: 10vmin;
+            background: white;
+            opacity: 0.95;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: transparent;
+            transition: background-image 0.2s ease-in-out, height 0.2s, width 0.2s, margin 0.2s;
+        }
+            .game .field .cell.hightlight {
+                height: 20vmin;
+                width: 20vmin;
+                margin: 0;
+            }
+
+            @keyframes hide {
+                from {opacity: 1;}
+                to {opacity: 0;}
+            }
+
+            .game .field .cell.animate {
+                position: absolute;
+                margin: 0;
+                transition: left 0.3s, top 0.3s;
+                z-index: -1;
+                animation-name: hide;
+                animation-duration: 0.2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+        .game .field .cell[nuclearPowerPlant="2"] {
+            background-image: url(../img/2.png);
+        }
+        .game .field .cell[nuclearPowerPlant="4"] {
+            background-image: url(../img/4.png);
+        }
+        .game .field .cell[nuclearPowerPlant="8"] {
+            background-image: url(../img/8.png);
+        }
+        .game .field .cell[nuclearPowerPlant="16"] {
+            background-image: url(../img/16.png);
+        }
+        .game .field .cell[nuclearPowerPlant="32"] {
+            background-image: url(../img/32.png);
+        }
+        .game .field .cell[nuclearPowerPlant="64"] {
+            background-image: url(../img/64.png);
+        }
+        .game .field .cell[nuclearPowerPlant="128"] {
+            background-image: url(../img/Unbioctium-128.png);
+        }
+        .game .field .cell[nuclearPowerPlant="256"] {
+            background-image: url(../img/256.png);
+        }
+        .game .field .cell[nuclearPowerPlant="512"] {
+            background-image: url(../img/512.png);
+        }
+        .game .field .cell[nuclearPowerPlant="1024"] {
+            background-image: url(../img/1024.png);
+        }
+        .game .field .cell[nuclearPowerPlant="2048"] {
+            background-image: url(../img/2048.png);
+        }
