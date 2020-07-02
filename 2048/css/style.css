@@ -14,12 +14,14 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: black;
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
     .game .header{
-        height: 20vmin;
+        height: 15vmin;
         width: 80vmin;
         font-size: 10vmin;
-        background-color: white;
         box-sizing: border-box;
     }
     .game .field {
@@ -28,7 +30,6 @@ html, body {
         flex-wrap: wrap;
         height: 80vmin;
         width: 80vmin;
-        background-color: white;
     }
         .game .field .cell {
             display: flex;
@@ -41,6 +42,8 @@ html, body {
             box-sizing: border-box;
             border-radius: 2vmin;
             font-size: 10vmin;
+            background: white;
+            opacity: 0.95;
             background-image: none;
             background-position: center;
             background-repeat: no-repeat;

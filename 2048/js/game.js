@@ -7,13 +7,12 @@ class Game {
             parentElement
         });
 
-        let headerElement = createAndAppend({
+        this.headerElement = createAndAppend({
             className: 'header',
             parentElement: gameFieldElement
         });
 
         this.rating = 0;
-        headerElement.innerHTML = 'Rating: ' + this.rating;
 
         // Создание поля ячеек
 
@@ -26,7 +25,7 @@ class Game {
         for (let i = 0; i < size; i++) {
             this.field[i] = []
             for (let j = 0; j < size; j++) {
-                this.field[i][j] = new Cell(fieldElement);
+                this.field[i][j] = new Cell(fieldElement, this);
             }
         }
         //
@@ -48,6 +47,18 @@ class Game {
         }.bind(this);
 
         console.log(this.field);
+    }
+    set rating(value) {
+        this._rating = value;
+        this.headerElement.innerHTML = 'Счет: ' + value;
+    }
+
+    get rating() {
+        return this._rating;
+    }
+
+    addRating(value) {
+        this.rating += value;
     }
     spawnUnit() {
         let emptyCells = [];
